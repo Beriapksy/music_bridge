@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="t1.css">
+
+</head>
+<body>
+    
+    <header class="header">
+       <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Top Trends</a>
+        <a href="#">Info</a>
+       </nav>
+       <form action="" class="search-bar">
+        <input type="text" placeholder="Search Music...">
+        <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAXpJREFUSEvtluFNw0AMRt1NYBJgEsokwCTAJNBJgEmgD8Xwyb2cfW2i/sFS1Sjx5fnz2eds7Ey2ORPXquALM7uegvzYX7+dGnAGvt8DHmYgBHB3bBBzYNQ9mRlKMyOwx8wpPm+Bgb6KI2nltzMzVBLMVcgEz29G4C3wuyjtqSGAWwlgSHkEk97tFDkKsiICzhqyRDZYw39qEexqR1IHnHVYWXUEf00voFqf07D/HKgJVJcDVjApJm3YZTVlk7+DSTNrU1Ow9mzW3/HFWhulteqkbVQpLIUP14aCjyqSie61QV1QH6nFtOheVVtDt6icqQjWdFcqdNT/NxOtQlAFvUEQB0hZLfQWOB6F+Pko5B+VPiJ1L9nfl8Jp97OmV/q9kehAtoNi8mOT+36ve3RmPecfAEwjrn1Mou5TTjftCM9QtzgzcNoW4uAd4be6Q2NJMKqB68fDLHxJMErL8KXBZfga4Bb8YMyuBVY4H4IHs31NcLcj/sEjB8ZJvt82WlsfbofjzgAAAABJRU5ErkJggg=="/></button>
+       </form>
+    </header>
+    
+    <div class="container">
+        <div class="item">
+            <h2 class="logo"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAQNJREFUSEu9lf0RATEUxPc6oRJUgkpQCSpBJagEO5M1byLYS5z8czP3sb/33u4lHQZe3cD6cAErAFcAFwDHPkU5gMNDdBpECdkB2DggB3BLQhRdZCB2c0rAIq8PgO+OUjeTN7B9PsK+gFilYPNshOs4vhZADiOI4vRorIe/AkhPfj11/w7gXJl5pkWZV3KqiokfUfz8IdvNgG2qnNleJhDv6SdrBrB6djELWY5dDQJg9dwquHKA5Vf8SHsOR8R9hiZrRNwmNDbCbL8ckwni2HjVsv0qtc0/UtGMhseA2X45xpWSWwIU/aoF2H7VAt6Z/OJXLUBJ+upXC8A5Me1D3xIrvXQHjLJMGV5zV3QAAAAASUVORK5CYII="/>  Music</h2>
+            <div class="text-item">
+                <br><br>
+                <h2>Welcome! <br><br><span>
+                    Do you want to download and listen <br>to your playlists?
+                    <br><br>Sign up now and enjoy!
+                </span></h2>
+            </div>
+        </div>                
+    </div>
+
+
+
+    <div class="background"></div>
+
+<div class="form-popup">
+    <div class="signin" id="signIn">
+        <div class="content">
+            <h2>Sign In</h2>
+            <form class="form">
+                <div class="inputBox">
+                    <input type="text" placeholder="Username" required > 
+                    
+                </div>
+                <div class="inputBox">
+                    <input type="password" placeholder="Password" required > 
+                     
+                </div>
+                <div class="links">
+                    <a href="#">Forgot Password</a>
+                    <a href="#" id="signUpButton" >Signup</a>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="Login">
+                    
+                    
+                </div>
+            </form>
+            <script>
+                const form = document.querySelector('form');
+                
+                form.addEventListener('submit', async (e) => {
+                  e.preventDefault();
+                  
+                  const email = document.querySelector('input[name="email"]').value;
+                  const password = document.querySelector('input[name="password"]').value;
+                  
+                  try {
+                    const response = await fetch('http://localhost:5000/signup', {
+                      method: 'POST',
+                      headers: {
+                        'Content-Type': 'application/json',
+                      },
+                      body: JSON.stringify({ email, password }),
+                    });
+              
+                    const result = await response.json();
+                    alert(result.message);
+                  } catch (error) {
+                    console.error('Bir hata oluştu:', error);
+                  }
+                });
+              </script>
+              
+        </div>
+    </div>
+</div>
+
+
+<div class="form-popup">
+        <div class="signup" id="signUpForm">
+        <div class="content">
+            <h2>Sign Up</h2>
+            <!-- Sign Up Formu -->
+<form class="form">
+    <div class="inputBox">
+        <input type="email" placeholder="Email" required id="EMAIL" name="email"> 
+    </div>
+    <div class="inputBox">
+        <input type="password" placeholder="Password" required id="PASSWORD" name="password"> 
+    </div>
+    <div class="links">
+        <a href="#">Forgot Password</a>
+        <a href="#" id="signInButton">Sign in</a>
+    </div>
+    <div class="inputBox">
+        <input type="submit" value="Sign Up">
+    </div>
+</form>
+
+        </div>
+    </div>
+</div>
+
+
+    <script src="t1.js"></script>
+    
+</body>
+</html>  

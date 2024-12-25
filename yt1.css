@@ -1,0 +1,77 @@
+body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('https://i.pinimg.com/736x/f1/62/bc/f162bcee341dce0215801fb072c67422.jpg'); /* Arkaplan resminin yolu */
+    background-size: cover; /* Resmin ekranı tamamen kaplamasını sağlar */
+    background-position: center; /* Resmi ortalar */
+    background-attachment: fixed; /* Sayfa kaydırıldığında arka plan sabit kalır */
+}
+
+.welcome-container {
+    text-align: center;
+    background-image: url('https://st2.depositphotos.com/1665130/10852/i/950/depositphotos_108524212-stock-photo-old-cassette-tape-and-player.jpg'); /* öndeki kuutcuk arkaplanı*/
+    background-size: cover; /* Kutuyu tamamen kaplamak için */
+    background-position: center; /* Resmi ortalar */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);    
+    background-color: rgba(255, 255, 255, 0.7); /* Hafif beyaz opak arka plan */
+}
+
+h1 {
+    color: #ff0000;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+p {
+    color: rgb(255, 255, 255);
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+.inputBox {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 5px;
+    outline: none;
+}
+
+.inputBox input[type="submit"] {
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.inputBox input[type="submit"]:hover {
+    background-color: #ff3333;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #cc0000;
+}
